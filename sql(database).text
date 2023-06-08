@@ -1,0 +1,89 @@
+
+
+ 1. What do you understand By Database ?
+=> A database is an organized collection of structured information, or data, typically stored electronically in a computer system. A database is usually controlled by a database management system (DBMS).
+
+2 .What is Normalization ? 
+=> Normalization is the process of minimizing redundancy (duplicity) from a relation or set of relations.
+ • Redundancy in relation may cause insertion, deletion and updation anomalies. So, it helps to minimize the redundancy in relations.
+ • Most Commonly used normal forms: 
+(1)First Normal Form: 
+• First normal form(1NF) Second normal form(2NF) Third normal form(3NF) Boyce & Code normal form (BCNF) 
+• If a relation contain composite or multi-valued attribute, it violates first normal form or a relation is in first normal form if it does not contain any composite or multi-valued attribute. 
+• A relation is in first normal form if every attribute in that relation is singled valued attribute. 
+(2) Second Normal Form: 
+• To be in second normal form, a relation must be in first normal form and relation must not contain any partial dependency. 
+• relation is in 2NF if it has No Partial Dependency, i.e., no non-prime attribute (attributes which are not part of any candidate key) is dependent on any proper subset of any candidate key of the table. 
+• Partial Dependency – If the proper subset of candidate key determines non-prime attribute, it is called partial dependency. 
+
+(3)Third Normal Form:
+ • A relation is in third normal form, if there is no transitive dependency for non-prime attributes as well as it is in second normal form. 
+• A relation is in 3NF if at least one of the following condition holds in every non-trivial function dependency X –> Y X is a super key. Y is a prime attribute (each element of Y is part of some candidate key). 
+• Transitive dependency – If A->B and B->C are two FDs then A->C is called transitive dependency.
+
+3. What is Difference between DBMS and RDBMS?
+=> DBMS :-
+• DBMS stands for Data Base Management System. 
+• Data + Management System 
+• Database is a collection of inter-related data and Management System is a set of programs to store and retrieve those data. 
+• DBMS is a collection of inter-related data and set of programs to store & access those data in an easy and effective manner.
+ • For Example, university database organizes the data about students, faculty, and admin staff etc. which helps in efficient retrieval, insertion and deletion of data from it.
+=> RDBMS:-
+• Database systems are basically developed for large amount of data. When dealing with huge amount of data, there are two things that require optimization: Storage of data and retrieval of data Storage:
+ • According to the principles of database systems, the data is stored in such a way that it acquires lot less space as the redundant data (duplicate data) has been removed before storage.
+ • Fast Retrieval of data: Along with storing the data in an optimized and systematic manner, it is also important that we retrieve the data quickly when needed. Database systems ensure that the data is retrieved as quickly as possible.
+4. What is MF Cod Rule of RDBMS Systems?
+=> A set of thirteen rules (numbered 0 to 12) that define a database to be a correct relational database management system(RDBMS).
+
+5. What do you understand By Data Redundancy?
+=>Data reduncy occurs when the same piece of data exist in multiple places. Where as data inconsistency is when the same dara exist in different formats in multiple tables.
+
+6. What is DDL Interpreter?
+=>DDL:- Data definition lalguage.
+1 .Create :- Creates a new table, a view of a table, or other object in database.
+2.ALTER:- Modifies an existing database object, such as a table.
+3.Drop:- Deletes an entire table, a view of a table or other object in the database.
+7 .What is DML Compiler in SQL?
+=>DML:-Data Manipulation Language .
+1.Insert:- creates a recordes.
+2.Update:-modifiers recordes.
+3.Delete:-Deletes recordes.
+
+8. What is SQL Key Constraints writing an Example of SQL Key Constraints?
+=>Primary Key: 
+• A primary key is a column of table which uniquely identifies each
+ • tuple (row) in that table. 
+• Primary key enforces integrity constraints to the table.
+ • Only one primary key is allowed to use in a table.
+ • The primary key does not accept the any duplicate and NULL values. 
+• The primary key value in a table changes very rarely so it is chosen with care.
+• where the changes can occur in a seldom manner. 
+• A primary key of one table can be referenced by foreign key of another table.
+Unique Key: 
+• Unique key constraints also identifies an individual table uniquely in a relation or table. 
+• A table can have more than one unique key unlike primary key.
+ • Unique key constraints can accept only one NULL value for column.
+ • Unique constraints are also referenced by the foreign key of another table.
+Foreign Key: 
+• When, "one" table's primary key field is added to a related "many" table in order to create the common field which relates the two tables,
+ it is called a foreign key in the "many" table.
+ • In the example given below, salary of an employee is stored in salary table. 
+• Relation is established via is stored in "Employee" table. To identify the salary of "Jforeign key column “Employee_ID_Ref” which refers “Employee_ID”
+ field in Employee table. 
+• of "Jhon" is stored in "Salary" table. But his employee info 
+• For example, salary hon", his "employee id" is stored with each salary record.
+
+
+9.What is save Point? How to create a save Point write a Query?
+=> Save Point:-
+• A SAVEPOINT is a point in a transaction when you can roll the transaction back to a certain point without rolling back the entire transaction. 
+• The syntax for a SAVEPOINT command is as shown below.
+ • SAVEPOINT SAVEPOINT_NAME;
+ • This command serves only in the creation of a SAVEPOINT among all the transactional statements. The ROLLBACK command is used to undo a group of transactions.
+
+10. What is trigger and how to create a Trigger in SQL?
+=>Trigger:-
+• A trigger is a stored procedure in database which automatically invokes whenever a special event in the database occurs .
+• For example, a trigger can be invoked when a row is inserted into a specified table.
+ Syntax: create trigger [trigger_name] [before | after] {insert | update | delete} on [table_name] [for each row] [trigger_body].
+
